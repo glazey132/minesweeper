@@ -3,12 +3,32 @@
 <head>
   <meta charset="UTF-8">
   <title>Title</title>
-  <link link rel="stylesheet" type="text/css" href="./game.css"/>
+  <link link rel="stylesheet" type="text/css" href="./styles/game.css"/>
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
-  <script src="./game.js"></script>
+  <script src="./js/game.js"></script>
 </head>
 <body>
-  <h1>Minesweeper Game</h1>
-  <div id="root"></div>
+  <div id="game" class="game">
+    <h1>Minesweeper Game</h1>
+    <div id="root"></div>
+    <div class="config">
+      <div  class="config-setting">
+        Rows:
+        <input type="number" name="rowsInput" id="rowsInput">
+      </div>
+      <div class="config-setting">
+        Columns:
+        <input type="number" name="columnsInput" id="columnsInput">
+      </div>
+      <div class="config-setting">
+        Number of Bombs:
+        <input type="number" name="bombsInput" id="bombsInput">
+      </div>
+      <button id="startGameButton">new game</button>
+    </div>
+    <div id="endGame" class="hide-message"></div>
+    <div id="timer" class="hide-message"></div>
+    <div id="gameBoard" class="game-board"></div>
+  </div>
 </body>
 </html>
